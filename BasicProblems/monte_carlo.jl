@@ -1,3 +1,6 @@
+# Use random number generation to estimate pi.
+
+
 function monte_carlo(n)
     land = 0
     for i=1:n
