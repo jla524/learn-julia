@@ -9,17 +9,16 @@ using Plots
 T = 200
 alphas = [0, 0.5, 0.9]
 label = ["α = 0" "α = 0.5" "α = 0.9"]
-lines = []
+X = []
 
 for alpha in alphas
-    X = zeros(T)
-    E = randn(T)
+    x = zeros(T)
     for i in 1:T-1
-        X[i+1] = alpha * X[i] + randn()
+        x[i+1] = alpha * x[i] + randn()
     end
-    push!(lines, X)
+    push!(X, x)
 end
 
 # Plot seems very slow for some reason
-plot(1:200, lines, label=label, lw=1.5)
+plot(1:T, X, label=label, lw=1.5)
 savefig("output")
