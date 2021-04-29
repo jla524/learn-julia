@@ -18,18 +18,18 @@ function Base.getindex(a::LinSpace, i)
     (a.N == 1 && a.start == a.stop) && return a.start 
     (a.N <= 1 && a.start != a.stop) && (error("endpoints differ"))
     (i <= 0 || i > a.N) && (error("index is out of bound"))
-    step = (a.stop - a.start) / (a.N - 1)
+    step = (a.stop - a.start) / (a.N - 1) 
     return a.start + (i - 1) * step
 end
 
 
-
-obj = LinSpace(1, 16, 3)
+# Check LinSpace
+obj = LinSpace(1, 2, 50)
 println(obj)
 println(size(obj))
-println(obj[1])
+println(obj[6])
 
 # Compare to range
-r = range(1, 16, length=3)
+r = range(1, 2, length=50)
 println(size(r))
-println(r[1])
+println(r[6])
