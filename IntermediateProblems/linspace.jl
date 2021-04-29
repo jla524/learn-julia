@@ -2,7 +2,6 @@
 # Use the Array interface to implement a lazy version of the LinSpace. 
 
 
-# TODO: Can we add an input check here?
 struct LinSpace
     start
     stop
