@@ -7,14 +7,13 @@ struct Strang end
 
 function mul(A::Strang, x)
     n = length(x)
-    rv = zeros(n)
-    # Set rv[i] = x[i-1] - 2 * x[i] + x[i+1]
-    for i in 1:n
-        i > 1 && (rv[i] += x[i-1])
-        rv[i] += -2 * x[i]
-        i < n && (rv[i] += x[i+1])
+    p = zeros(n)
+    p[1] = -2 * x[1] + x[2]
+    p[end] = x[end-1] - 2 * x[end]
+    for i in 2:n-1
+        p[i] = x[i-1] -2 * x[i] + x[i+1]
     end
-    return reshape(rv, :, 1)
+    return reshape(p, :, 1)
 end
 
 
