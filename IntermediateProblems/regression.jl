@@ -32,4 +32,19 @@ println(diff)
 
 
 X = rand(100);
-y = 2X  + 0.1 * randn(100);
+y = 2X + 0.1 * randn(100);
+
+# Solve using llsq
+b = X \ y;
+
+# Create scatter plot
+using Plots
+scatter(X, y, title="Regression Plot on Fake Data")
+
+# Plot best fit line
+Plots.abline!(b, 0, lw=2)
+
+# Add labels and save
+xlabel!("x")
+ylabel!("y")
+savefig("output")
