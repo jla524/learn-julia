@@ -5,7 +5,6 @@
 # matrix, and solve for the 4x1 array β via *Xβ = y* using qrfact, or \, or 
 # the definition of the OLS estimator. 
 
-
 X = rand(1000, 3)               # feature matrix
 a0 = rand(3)                    # ground truths
 y = X * a0 + 0.1 * randn(1000);  # generate response
@@ -29,7 +28,6 @@ println(diff)
 # plot using scatter! from Plots.jl. Add the regression line using abline!. 
 # Add a title saying "Regression Plot on Fake Data", and label the x and y 
 # axis. 
-
 
 X = rand(100);
 y = 2X + 0.1 * randn(100);

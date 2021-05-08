@@ -2,6 +2,7 @@
 # Unitful to build arrays of numbers with units, and see if you can make 
 # your LinSpace not give errors.
 
+using Unitful
 
 # Struct and functions are copied from linspace.jl
 struct LinSpace
@@ -10,11 +11,9 @@ struct LinSpace
     N
 end
 
-
 function Base.size(a::LinSpace)
     return (a.N,)
 end
-
 
 function Base.getindex(a::LinSpace, i)
     (a.N == 1 && a.start == a.stop) && return a.start 
@@ -24,8 +23,6 @@ function Base.getindex(a::LinSpace, i)
     return a.start + (i - 1) * step
 end
 
-
-using Unitful
 obj = LinSpace(1u"kg", 10u"kg", 10)
 println(obj)
 println(obj[5])

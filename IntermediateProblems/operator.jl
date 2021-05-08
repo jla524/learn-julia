@@ -1,9 +1,7 @@
 # Define a type StrangMatrix and define a dispatch such that A*x acts like a
 # Strang matrix on a vector.
 
-
 struct Strang end
-
 
 function mul(A::Strang, x)
     n = length(x)
@@ -15,7 +13,6 @@ function mul(A::Strang, x)
     end
     return reshape(p, :, 1)
 end
-
 
 # Overload the * operator
 Base.:*(A::Strang, x) = mul(A, x)

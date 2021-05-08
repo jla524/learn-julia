@@ -3,9 +3,7 @@
 # your result against the *quantile(d::UnivariateDistribution, q::Number)* 
 # function.
 
-
 using Distributions
-
 
 function compute_quantile(d::UnivariateDistribution, q::Number)
     prev = mean(d)
@@ -16,7 +14,6 @@ function compute_quantile(d::UnivariateDistribution, q::Number)
     end
     return curr
 end
-
 
 for dist in [Gamma(5, 1), Normal(0, 1), Beta(2, 4)]
     @show compute_quantile(dist, 0.5)
