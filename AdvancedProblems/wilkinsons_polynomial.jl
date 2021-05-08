@@ -1,11 +1,11 @@
 # Plot the roots of Wilkinson's polynomial with perturbation
-n = 20
-r = collect(Int128(1):n) # use Int128 to prevent integer overflow
-
 using Polynomials
 using LinearAlgebra
 using Plots
 using Random
+
+n = 20
+r = collect(Int128(1):n) # use Int128 to prevent integer overflow
 
 # Part 1: Convert root form to coefficient form. (Compute a_k)
 p = fromroots(r)
