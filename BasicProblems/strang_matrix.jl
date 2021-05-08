@@ -1,7 +1,6 @@
 # Use Julia's array and control flow syntax in order to define the NxN 
 # Strang matrix.
 
-
 N = 10
 A = zeros(Int8, N, N)
 

@@ -3,7 +3,6 @@
 # standard normal. Using "T = 200" and "\alpha = 0, 0.5, 0.9" use Plots.jl to
 # plot a timecourse for each of the parameters. 
 
-
 using Plots
 
 T = 200

@@ -1,7 +1,6 @@
 # Using only rand(), write a function binomial_rv(n,p) that produces one draw
 # of Bin(n, p).
 
-
 function binomial_rv(n, p)
     rv = 0
     for i=1:n

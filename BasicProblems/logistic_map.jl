@@ -4,27 +4,30 @@
 # state. This steady state is dependent on r. Write a function which plots the
 # steady state attractor.
 
-
 using Plots
 
 r = 2.9:.001:4
 b = ones(length(r)) * .25
 X = ones(length(r), 150)
 
+# Run for 400 iterations to ready steady state
 for i in 1:400
     @. b = r * b * (1 - b)
 end
 
 X[:, 1] = b
 
-for i in 1:149
-    @. X[:, i+1] = r * X[:, i] * (1 - X[:, i])
+# Run another 150 values and state the values
+for i in 2:150
+    @. X[:, i] = r * X[:, i-1] * (1 - X[:, i-1])
 end
 
+# Plot r x-axis vs y_s(r)
 plot(collect(r), X,
      seriestype=:scatter,
      markersize=.002, 
      legend=false,
      color=:black
 )
+
 savefig("output")

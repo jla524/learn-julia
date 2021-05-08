@@ -3,10 +3,8 @@ import numpy as np
 from random import gauss
 import matplotlib.pyplot as plt
 
-
 T = 200
 alphas = [0, 0.5, 0.9]
-
 
 if __name__ == '__main__':
     fig = plt.figure()
