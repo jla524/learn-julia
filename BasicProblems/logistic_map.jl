@@ -23,11 +23,11 @@ for i in 2:150
 end
 
 # Plot r x-axis vs y_s(r)
-plot(collect(r), X,
+plot(collect(r),
+     X,
      seriestype=:scatter,
      markersize=.002, 
      legend=false,
-     color=:black
-)
+     color=:black)
 
 savefig("output")
