@@ -1,3 +1,7 @@
+# Use Clustering.jl to cluster using the SepalLength, PetalLength, and
+# PetalWidth features via K-means clustering. Make a scatter plot of
+# the resulting clusters.
+
 using RDatasets
 using Clustering
 using Plots
