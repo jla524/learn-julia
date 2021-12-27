@@ -8,7 +8,7 @@ using Distances
 using Clustering
 using LinearAlgebra
 
-words = JSON.parsefile("words.json")
+words = JSON.parsefile("../data/words.json")
 words_by_class = collect(values(words))
 all_words = reduce(vcat, words_by_class)
 embedding_table = load_embeddings(Word2Vec; keep_words=all_words)
