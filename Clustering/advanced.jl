@@ -2,11 +2,7 @@
 # trained using Word2Vec.jl. These are 100 dimentional vectors, which encode
 # syntactic and semantic information about words.
 
-using JSON
-using Embeddings
-using Distances
-using Clustering
-using LinearAlgebra
+using JSON, Embeddings, Distances, Clustering, LinearAlgebra
 
 words = JSON.parsefile("../data/words.json")
 words_by_class = collect(values(words))

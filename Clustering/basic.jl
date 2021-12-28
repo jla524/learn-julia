@@ -2,9 +2,7 @@
 # PetalWidth features via K-means clustering. Make a scatter plot of
 # the resulting clusters.
 
-using RDatasets
-using Clustering
-using Plots
+using RDatasets, Clustering, Plots
 
 iris = dataset("datasets", "iris")
 columns = ["SepalLength", "PetalLength", "PetalWidth"]
