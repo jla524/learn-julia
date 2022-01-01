@@ -2,7 +2,6 @@
 
 using Loess, Plots
 
-
 xs = 12 .* rand(100)
 ys = cos.(xs) .+ 0.5 * rand(100)
 
