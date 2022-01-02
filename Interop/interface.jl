@@ -9,5 +9,5 @@ import sys
 sys.path.insert(0, ".")
 """
 
-fizzbuzz = pyimport("model")["fizz_buzz"]
+fizzbuzz = pyimport("base")["fizz_buzz"]
 println(fizzbuzz(100))
