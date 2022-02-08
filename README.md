@@ -1,16 +1,19 @@
 # learn-julia
 Learn [Julia][1] using a problem-focused approach. 
 
-Thanks to [Chris Rackauckas][2] for the [problems and answers][3].
+Built with [Julia for Visual Studio Code][2].
+
+Thanks to [Chris Rackauckas][3] for the [problems and answers][4].
 
 ## Why Julia?
 - Speed
 - Ease of use
 - Multiple dispatch
-- Read [this article][4] for more info
+- Read [this article][5] for more info
 
 
 [1]: https://julialang.org
-[2]: https://github.com/ChrisRackauckas
-[3]: http://ucidatascienceinitiative.github.io/IntroToJulia/
-[4]: https://storopoli.io/Bayesian-Julia/pages/1_why_Julia/
+[2]: https://www.julia-vscode.org
+[3]: https://github.com/ChrisRackauckas
+[4]: http://ucidatascienceinitiative.github.io/IntroToJulia/
+[5]: https://storopoli.io/Bayesian-Julia/pages/1_why_Julia/
