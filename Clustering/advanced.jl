@@ -1,4 +1,4 @@
-# For the the example presented here, we will use a subhset of Word Embedding,
+# For the the example presented here, we will use a subset of Word Embedding,
 # trained using Word2Vec.jl. These are 100 dimentional vectors, which encode
 # syntactic and semantic information about words.
 
